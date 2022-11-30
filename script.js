@@ -22,8 +22,8 @@ let rightclickCounter = 0;
 let downclickCounter = 0;
 
 function moveRight() {
-    const y = columnCounter;
-    const z = rowCounter;
+    let y = columnCounter;
+    let z = rowCounter;
     if (rightclickCounter < 3) {
         document.getElementById('column' + ++y + 'row' + z).innerHTML = buttonRat;
         ++columnCounter;
