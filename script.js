@@ -7,6 +7,8 @@ function checkKey(e) {
         moveRight();
     } else if (e.keyCode === 40) {
         moveDown();
+    } else if (e.keyCode === 13) {
+        removeCallOut();
     }
 }
 let buttonRat = '<p id="rat">🐭</p>';
@@ -67,8 +69,6 @@ function checkClickCounter() {
     let y = columnCounter;
     let z = rowCounter;
     if (rightclickCounter == 3) {
-        BadCallOut();
-
         document.getElementById('column1row1').innerHTML = buttonRat;
         document.getElementById('column' + y + 'row' + z).innerHTML = '';
         columnCounter = 1;
@@ -76,9 +76,8 @@ function checkClickCounter() {
         rightclickCounter = 0;
         downclickCounter = 0;
         document.getElementById('column' + y + 'row' + z).innerHTML = '';
+        BadCallOut();
     } else if (downclickCounter == 3) {
-        BadCallOut();
-
         document.getElementById('column1row1').innerHTML = buttonRat;
         document.getElementById('column' + y + 'row' + z).innerHTML = '';
         columnCounter = 1;
@@ -86,10 +85,15 @@ function checkClickCounter() {
         downclickCounter = 0;
         rightclickCounter = 0;
         document.getElementById('column' + y + 'row' + z).innerHTML = '';
+        BadCallOut();
     }
 }
 function removeCallOut() {
     document.getElementById('callout').innerHTML = '';
+    columnCounter = 1;
+    rowCounter = 1;
+    downclickCounter = 0;
+    rightclickCounter = 0;
 }
 function BadCallOut() {
     document.getElementById('callout').innerHTML = badCallOut;
