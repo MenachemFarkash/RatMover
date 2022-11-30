@@ -1,0 +1,156 @@
+body {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-color: rgb(91, 88, 88);
+    height: 98vh;
+}
+#header {
+    font-size: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    color: rgb(255, 153, 28);
+    margin-bottom: 0px;
+}
+#rules {
+    font-size: 30px;
+    margin-top: 15px;
+}
+#rulesSpan {
+    color: red;
+}
+#container {
+    display: grid;
+    grid-template-columns: repeat(7, 1.4fr);
+    grid-template-rows: repeat(6, 2fr);
+    width: 814px;
+    height: 610px;
+    padding: 25px;
+    border-radius: 15px;
+    border: 2px solid rgb(255, 153, 28);
+    background-color: rgb(11, 115, 167);
+    box-shadow: 10px 10px rgba(26, 26, 26, 0.349);
+}
+
+input {
+    height: 45px;
+    width: 200px;
+}
+button {
+    height: 50px;
+    width: 175px;
+    border: none;
+}
+
+#rat {
+    scale: 3 3;
+    animation: mymove 0.5s;
+}
+
+@keyframes mymove {
+    0% {
+        scale: 0 0;
+    }
+    5% {
+        scale: 0 0;
+    }
+    100% {
+        scale: 3 3;
+    }
+}
+
+#rat original {
+    scale: 0;
+    opacity: 0.5;
+}
+
+#column1row1,
+#column2row1,
+#column3row1,
+#column4row1,
+#column5row1,
+#column6row1,
+#column7row1,
+#column1row2,
+#column2row2,
+#column3row2,
+#column4row2,
+#column5row2,
+#column6row2,
+#column7row2,
+#column1row3,
+#column2row3,
+#column3row3,
+#column4row3,
+#column5row3,
+#column6row3,
+#column7row3,
+#column1row4,
+#column2row4,
+#column3row4,
+#column4row4,
+#column5row4,
+#column6row4,
+#column7row4,
+#column1row5,
+#column2row5,
+#column3row5,
+#column4row5,
+#column5row5,
+#column6row5 {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    width: 114px;
+    background-color: rgb(76, 185, 212);
+    border: 1px solid rgb(46, 132, 153);
+    border-radius: 15px;
+}
+
+#column1row1,
+#column7row5 {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    width: 114px;
+    background-color: rgb(101, 212, 76);
+    border: 1px solid rgb(15, 149, 40);
+    border-radius: 15px;
+}
+
+/* ??? */
+
+#callout {
+    position: fixed;
+    top: 300px;
+    margin-left: 20px;
+    width: 500px;
+    z-index: 99 !important;
+}
+
+.callout-header {
+    border-radius: 10px;
+    text-align: center;
+    padding: 25px 15px;
+    background: rgb(146, 13, 13);
+    font-size: 30px;
+    color: white;
+    box-shadow: 10px 10px rgba(128, 128, 128, 0.349);
+}
+
+.closebtn {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.closebtn:hover {
+    color: lightgrey;
+}
